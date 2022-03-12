@@ -1,0 +1,136 @@
+// pc-register 註冊
+.register-wrap{
+    font-family: NotoSansCJKtc-Black;
+    background: #d6d5d5;
+    color: #3D1101;
+    padding: 20px 0;
+    @include iphone5(){
+        padding: 0 10px;
+    }
+    .register-wrap-title{
+        font-size: 48px;
+        text-align: center;
+        padding-top: 40px;
+        font-weight: bold;
+        @include iphone5(){
+            font-size: 38px;
+        }
+    }
+    .register-wrap-inner{
+        font-size: 20px;
+        text-align: center;
+        padding-top:10px;
+        padding-bottom: 40px;
+        @include iphone5(){
+            font-size: 16px;
+        }
+    }
+    .register-box{
+        max-width: 80%;
+        margin: 0 auto;
+        box-shadow:1px 1px 10px 1px gray;
+        padding: 10px;
+        position: relative;
+        @include iphone5(){
+            max-width: 100%;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            border: 3px solid orangered;
+            background: orangered;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        h2{
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin: 5px 0;
+        }
+        .register-inner-box{
+            display: flex;
+            padding: 20px 0;
+            font-size: 18px;
+            @include iphone5(){
+                flex-direction: column;
+                align-items: center;
+            }
+            .register-clause{
+                max-width: 50%;
+                line-height: 24px;
+                padding-right: 10px;
+                @include iphone5(){
+                    max-width: 100%;
+                    padding-right: 0;
+                }
+                span{
+                    display: block;
+                }
+            }
+            .register-input{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                padding:0 10px;
+                @include iphone5(){
+                    width: 100%;
+                    padding:0;
+                    margin-top: 20px;
+                }
+                label{
+                font-size: 18px;
+                @include iphone5(){
+                    font-weight: bold;
+                }
+                }
+                .register-style1,.register-style2{
+                    padding:8px 30px;
+                    border-radius: 3px;
+                    outline: none;
+                    margin: 10px 0;
+                    border: 1px rgb(190, 186, 186) solid;
+                    letter-spacing: 2px;
+                }
+                .register-style1{
+                    background-image:url(../img/email.png);
+                    background-repeat: no-repeat;
+                    background-position: 10px;
+                }
+                .register-style2{
+                    background-image: url(../img/padlock.png);
+                    background-repeat: no-repeat;
+                    background-position: 10px;
+                }
+                a{
+                    font-size: 14px;
+                    color: orangered;
+                }
+                .register-subimt{
+                    padding: 8px 5px;
+                    border-radius: 3px;
+                    outline: none;
+                    margin: 10px 0;
+                    width: 30%;
+                    align-self: flex-end;
+                    background: orangered;
+                    color: white;
+                    border:none;
+                    cursor: pointer;
+                    @include iphone5(){
+                        padding: 8px 0px;
+                    }
+                    &:hover{
+                        background: rgb(163, 46, 3);
+                        color: white;
+                    }
+                    &:active{
+                        box-shadow: 1px 1px 10px black;
+                    }
+                }           
+            }
+        }   
+    }
+}
+

@@ -1,0 +1,139 @@
+.login-wrap{
+    font-family: NotoSansCJKtc-Black;
+    max-width: 100%;
+    background: #d6d5d5;
+    color: #3D1101;
+    padding: 20px 0;
+    @include iphone5(){
+        padding: 0px 10px;
+    }
+    .login-wrap-title{
+        font-size: 48px;
+        text-align: center;
+        padding-top: 40px;
+        font-weight: bold;
+    }
+    .login-wrap-inner{
+        font-size: 20px;
+        text-align: center;
+        padding-top:10px;
+        padding-bottom: 40px;
+    }
+    .login-box{
+        max-width: 30%;
+        margin: 0 auto;
+        box-shadow:1px 1px 10px 1px gray;
+        padding: 10px;
+        position: relative;
+        @include ipad(){
+            max-width: 70%;
+        }
+        @include iphone5(){
+            max-width: 100%;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            border: 3px solid orangered;
+            background: orangered;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        h2{
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin: 10px 0;
+            @include iphone5(){
+                margin: 20px 0;
+            }
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            label{
+                font-size: 16px;
+            }
+            .login-style1,.login-style2{
+                padding:8px 30px;
+                border-radius: 3px;
+                outline: none;
+                margin: 10px 0;
+                border: 1px rgb(190, 186, 186) solid;
+                letter-spacing: 2px;
+            }
+            .login-style1{
+                background-image:url(../img/email.png);
+                background-repeat: no-repeat;
+                background-position: 10px;
+            }
+            .login-style2{
+                background-image: url(../img/padlock.png);
+                background-repeat: no-repeat;
+                background-position: 10px;
+            }
+            a{
+                text-decoration:none ;
+                color: orangered;
+            }
+            .login-btn{
+                display: flex;
+                width: 100%;
+                padding: 20px 0;
+                justify-content: space-between;
+                @include iphone5(){
+                    flex-direction: column;
+                }
+                a{
+                    text-decoration: none;
+                    display: block;
+                    width: 40%;
+                    padding: 10px 0;
+                    text-align:center;
+                    background: rgb(158, 152, 152);
+                    color: white;
+                    border-radius: 3px;
+                    font-size: 18px;
+                    @include ipad(){
+                        width: 40%;
+                    }
+                    @include iphone5(){
+                        width: 100%;
+                    }
+                    &:hover{
+                        background: rgb(100, 99, 99);
+                        color: white;
+                    }
+                    &:active{
+                        box-shadow: 1px 1px 10px black;
+                    }
+                }
+                input{
+                    width: 40%;
+                    color: white;
+                    background:orangered;
+                    border: none;
+                    border-radius: 3px;
+                    font-size: 18px;
+                    cursor: pointer;
+                    @include ipad(){
+                        width: 40%;
+                    }
+                    @include iphone5(){
+                        margin-top: 20px;
+                        padding: 5px 0;
+                        width: 100%;
+                    }
+                    &:hover{
+                        background: rgb(163, 46, 3);
+                        color: white;
+                    }
+                    &:active{
+                        box-shadow: 1px 1px 10px black;
+                    }
+                }
+            }
+        }
+    }
+}

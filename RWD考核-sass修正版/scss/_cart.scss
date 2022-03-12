@@ -1,0 +1,350 @@
+// PC cart
+.cart-wrap{
+    display: flex;
+    justify-content: space-around;
+    padding:50px 0;
+    background: rgb(214, 213, 213);
+    max-width: 100%;
+    @include iphone5(){
+        flex-direction: column;
+        padding: 50px 10px;
+    }
+    // pc-menu-wrap
+    .cart-menu-wrap{
+        color: #3D1101;
+        max-width: 15%;
+        @include ipad(){
+            max-width: 30%;
+        }
+        @include iphone5(){
+            max-width: 100%;
+        }
+        h2{
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            @include ipad(){
+                font-size: 18px;
+            }
+            @include iphone5(){
+                text-align: left;
+                margin-left: 10px;
+            }
+            &::before{
+                font-family: 'FontAwesome';
+                color: #3D1101;
+                content: '\f06c';
+                font-size: 23px;
+                margin-right: 10px;
+                @include ipad(){
+                    font-size: 20px;
+                }
+            }
+        }
+        ul{
+            li{
+                a{
+                    font-size: 16px;
+                    display: block;
+                    text-decoration: none;
+                    color: #3D1101;
+                    padding: 10px 10px;
+                    padding-right:50px;
+                    border-bottom: 1px solid #3D1101;
+                    @include ipad(){
+                        font-size: 14px;
+                        padding: 10px 15px;
+                        padding-right:0;
+                    }
+                    &:hover{
+                        background: #3D1101;
+                        color: white;
+                    }
+                    &:active{
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
+
+    // pc-product-wrap
+    .cart-product-wrap{
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+        max-width: 85%;
+        @include ipad(){
+            max-width: 70%;
+        }
+        @include iphone5(){
+            margin-left: 0;
+            max-width: 100%;
+        }
+        .cart-product-search-top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include iphone5(){
+                flex-direction: column;
+                justify-content: none;
+                align-items: none;
+                padding: 20px 0;
+            }
+            .cart-search{
+                border: 2px solid #3D1101;
+                border-radius: 5px;
+                display: flex;
+                width: 60%;
+                @include iphone5(){
+                    width:100%;
+                }
+                input{
+                    border: none;
+                    background: none;
+                    outline: none;
+                    font-size: 16px;
+                    padding: 5px;
+                    letter-spacing: 2px;
+                    display: block;
+                    flex-grow: 1;
+                    @include ipad(){
+                        font-size: 14px;
+                        letter-spacing: 1px;
+                    }
+                }
+                .search-btn{
+                    width: 16px;
+                    padding: 5px;
+                    background:#3D1101;
+                    cursor: pointer;
+                    &:hover{
+                        filter: hue-rotate(600deg);
+                        border-top-right-radius: 2px;
+                        border-bottom-right-radius: 2px;
+                    }
+                    &:active{
+                        box-shadow:1px 1px 10px 1px rgb(0, 0, 0);
+                    }
+                }
+            }
+            .cart-shopping{
+                display: flex;
+                align-items: center;
+                margin-right: 90px;
+                @include ipad(){
+                    margin-right: 0;
+                }
+                @include iphone5(){
+                    padding: 20px 0;
+                    align-self: flex-end;
+                }
+                a{
+                    text-decoration: none;
+                    color:#3D1101;
+                    padding:0 20px;
+                }
+                .shopping-checkout{
+                    position: relative;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        top: 1px;
+                        bottom: 1px;
+                        right: 0;
+                        border: 1px solid #3D1101;
+                    }
+                    &:hover{
+                        font-weight: bold;
+                    }
+                    &:active{
+                        color: red;
+                    }
+                }
+                .shopping-cart{
+                    position: relative;
+                    &::before{
+                        position: absolute;
+                        right: 10px;
+                        content: "2";
+                        font-size: 7px;
+                        color: white;
+                        text-align: center;
+                        border-radius: 50%;
+                        width: 15px;
+                        height: 15px;
+                        background: orangered;
+                        transition: all 1s;
+                        transform: translateX(0);
+                    }
+                    &:hover::before{
+                        color: black;
+                        background: rgb(55, 197, 150);
+                        transition: all 1s;
+                        transform: translateX(100%);
+                    }
+                }
+            }
+        }
+        .cart-product{
+            display: flex;
+            flex-wrap: wrap;
+            @include ipad(){
+                justify-content: space-around;
+            }
+            .product-position{
+                box-shadow:  1px 1px 10px gray;
+                width: 31%;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                margin: 20px 0;
+                margin-right: 20px;
+                @include ipad(){
+                    width: 40%;
+                    margin-right: 0;
+                }
+                @include iphone5(){
+                    width: 100%;
+                    margin-top: 20px;
+                }
+                .like-mark{
+                    background-image:url(../img/heart.png);
+                    width: 16px;
+                    height: 16px;
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    filter: invert(100%);
+                    &.active{
+                        background-image: url(../img/like.png);
+                    }
+                }
+                .cart-product-mark-wrap{
+                    position: absolute;
+                    width: 100px;
+                    height: 100px;
+                    top: -5%;
+                    right: -4%;
+                    overflow: hidden;
+                    @include ipad(){
+                        right: -7%; 
+                    }
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        border: 8px solid rgb(26, 80, 9);
+                        left: 15%;
+                        top: 0;
+                    }    
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        border: 8px solid rgb(26, 80, 9);
+                        right: 0%;
+                        bottom: 15%;
+                        @include iphone5(){
+                            right: -2%;
+                        }
+                    }    
+                }
+                .cart-product-mark{
+                    width: 120px;
+                    background: lightgreen;
+                    position: absolute;
+                    top: 18%;
+                    left:7%;
+                    font-weight: bold;
+                    text-align: center;
+                    line-height: 30px;
+                    transform: rotate(45deg);
+                    font-size: 14px;
+                    z-index: 1;
+                }
+                .cart-product-inner{
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    align-items: center;
+                    h3{
+                        font-size: 20px;
+                        color: #3D1101;
+                        margin-top: 20px;
+                        width: 50%;
+                        @include ipad(){
+                            font-size: 16px;
+                            margin-top: 10px;
+                            width: 100%;
+                        }
+                        p{
+                            font-size: 12px;
+                            color: #3D1101;
+                            margin-top: 5px;
+                            position: relative;
+                            &::before{
+                                content: "";
+                                border: 1px solid #3D1101;
+                                position: absolute;
+                                bottom: -10px;
+                                left: 50px;
+                                right: 50px;
+                            }
+                        }
+                    }
+                    .price{
+                        font-size: 20px;
+                        color: #3D1101;
+                        font-weight: bold;
+                        margin: 20px 0;
+                        @include ipad(){
+                            font-size: 18px;
+                        }
+                        &::before{
+                            font-family: 'FontAwesome';
+                            color: #3D1101;
+                            content: '\f155';
+                            font-size: 20px;
+                        }
+                    }
+                    button{
+                        width: 80%;
+                        border: 2px solid orangered;
+                        border-radius: 5px;
+                        background: none;
+                        margin: 5px 0;
+                        color: orangered;
+                        font-size: 16px;
+                        cursor: pointer;
+                        @include ipad(){
+                            width: 60%;
+                            font-size: 15px;
+                        }
+                        @include iphone5(){
+                            width: 90%;
+                        }
+                        &:hover{
+                            background-color: orangered;
+                            color: white;
+                        }
+                        &::before{
+                            font-family: 'FontAwesome';
+                            color: orangered;
+                            content: '\f07a';
+                            font-size: 14px;
+                            margin-right: 10px;
+                            @include ipad(){
+                                font-size: 13px;
+                            }
+                        }
+                        &:hover::before{
+                            background-color: orangered;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }   
+    }
+}
+

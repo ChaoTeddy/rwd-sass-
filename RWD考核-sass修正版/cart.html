@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="六角學院-Teddy-RWD考核">
+    <meta name="keyword" content="六角學院,Teddy,RWD,RWD考核">
+    <meta property="og:title" content="六角學員Teddy">
+    <meta property="og:description" content="最終RWD考核">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://upload.cc/i1/2022/03/08/mjLqGH.png">
+    <link rel="shortcut icon" href="img/student.ico">
+    <title>Cart</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>    <!-- swiper -->
+    <link rel="stylesheet" href="css/cart.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>   <!-- swiper -->
+    <script src="https://kit.fontawesome.com/15f1e39628.js" crossorigin="anonymous"></script>  <!-- Font-Awesome -->
+    <script src="js/all.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <h1><a href="index.html" class="header-logo">六角西餐廳</a></h1>
+            <button class="menu-button">
+                <div class="menu-button-style"></div>
+            </button>
+            <!-- PC-Menu -->
+            <ul>
+                <li class="pc-menu-wrap">
+                    <a href="#" class="pc-menu-wrap-a">Login</a>
+                    <ul class="pc-menu-inner">
+                        <li><a href="register.html">會員註冊</a></li>
+                        <li><a href="login.html">會員登入</a></li>
+                    </ul>
+                </li>
+                <li class="pc-menu-wrap">
+                    <a href="#"class="pc-menu-wrap-a">商品</a>
+                    <ul class="pc-menu-inner">
+                        <li><a href="cart.html">夏季限定</a></li>
+                        <li><a href="#">套餐優惠</a></li>
+                        <li><a href="#">漢堡</a></li>
+                        <li><a href="#">飲料</a></li>
+                        <li><a href="#">點心</a></li>
+                    </ul>
+                </li>
+                <li class="pc-menu-wrap"><a href="#"class="pc-menu-wrap-a">特色</a></li>
+                <li class="pc-menu-wrap"><a href="#"class="pc-menu-wrap-a">主廚</a></li>
+                <li class="pc-menu-wrap"><a href="#"class="pc-menu-wrap-a">地圖</a></li>
+            </ul>
+        </div>
+
+
+        <div class="container">
+            <!-- Mobile-Menu- -->
+            <ul class="mobile-menu">
+                <li class="mobile-menu-wrap"><a href="index.html"class="mobile-menu-wrap-a">首頁</a></li>
+                <li class="mobile-menu-wrap">
+                    <a href="#" class="mobile-menu-wrap-a">Login</a>
+                    <ul>
+                        <li><a href="register.html">會員註冊</a></li>
+                        <li><a href="login.html">會員登入</a></li>
+                    </ul>
+                </li>
+                <li class="mobile-menu-wrap">
+                    <a href="#"class="mobile-menu-wrap-a">商品介紹</a>
+                    <ul>
+                        <li><a href="cart.html">夏季限定</a></li>
+                        <li><a href="#">套餐優惠</a></li>
+                        <li><a href="#">漢堡</a></li>
+                        <li><a href="#">飲料</a></li>
+                        <li><a href="#">點心</a></li>
+                    </ul>
+                </li>
+                <li class="mobile-menu-wrap"><a href="#"class="mobile-menu-wrap-a">特色</a></li>
+                <li class="mobile-menu-wrap"><a href="#"class="mobile-menu-wrap-a">主廚</a></li>
+                <li class="mobile-menu-wrap"><a href="#"class="mobile-menu-wrap-a">地圖</a></li>
+            </ul>
+
+
+
+            <div class="container-right">
+                <div class="content">
+
+                    <!-- Slider main container -->
+
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                        <!-- Slides -->
+                            <div class="swiper-slide">
+                                <img class="slide-b" src="img/header/header_desktop@2x.png" alt="pc-slide">
+                                <img class="slide-m" src="img/header/header-ipad.jpg" alt="ipad-slide">
+                                <img class="slide-s" src="img/header/header-iphone.jpg" alt="iphone-slide">
+                                <div class="banner-slogan">
+                                    <p class="banner-slogan-wrap">咬一口<br>就無法忘懷的漢堡
+                                        <span class="banner-inner">七夕絕對無法錯過的好滋味
+                                            <span>六角大漢堡</span>
+                                        </span>
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="slide-b" src="img/header/header_desktop@2x.png" alt="pc-slide">
+                                <img class="slide-m" src="img/header/header-ipad.jpg" alt="ipad-slide">
+                                <img class="slide-s" src="img/header/header-iphone.jpg" alt="iphone-slide">
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+                    <div class="cart-wrap">
+                        <div class="cart-menu-wrap">
+                            <h2>線上訂購美食</h2>
+                            <ul>
+                                <li><a href="#">全部 (23)</a></li>
+                                <li><a href="#">只愛吃薯條 (18)</a></li>
+                                <li><a href="#">加熱就可食 (1)</a></li>
+                                <li><a href="#">不敗漢堡系列 (4)</a></li>
+                            </ul>
+                        </div>
+                        <div class="cart-product-wrap">
+                            <div class="cart-product-search-top">
+                                <div class="cart-search">
+                                    <input type="text" placeholder="請輸入要搜尋的關鍵字">
+                                    <a href="#" class="search-btn">
+                                        <img src="img/search.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="cart-shopping">
+                                <a href="#" class="shopping-checkout">結帳去</a>
+                                <a href="#" class="shopping-cart">
+                                    <img src="img/shopping.png" alt="購物車">
+                                </a>
+                                </div>
+                            </div>
+                            <ul class="cart-product">
+                                <li class="product-position">
+                                    <div class="cart-product-mark-wrap">
+                                        <h2 class="cart-product-mark">
+                                            熱銷美食
+                                        </h2>
+                                    </div>
+                                    <img src="img/product/product_1.png" alt="經典漢堡">
+                                    <a href="#" class="like-mark"></a>
+                                    <div class="cart-product-inner">
+                                        <h3>經典漢堡套餐
+                                            <p>Classic Habumger Package</p>
+                                        </h3>
+                                        <p class="price">120</p>
+                                        <button>加入購物車</button>
+                                    </div>
+                                </li>
+                                <li class="product-position">
+                                    <img src="img/product/product_2.png" alt="英俊香腸">
+                                    <a href="#" class="like-mark"></a>
+                                    <div class="cart-product-inner">
+                                        <h3>英俊香腸
+                                            <p>Handosme Sausage</p>
+                                        </h3>
+                                        <p class="price">1,024</p>
+                                        <button>加入購物車</button>
+                                    </div>
+                                </li>
+                                <li class="product-position">
+                                    <img src="img/product/product_3.png" alt="漢堡兄弟">
+                                    <a href="#" class="like-mark"></a>
+                                    <div class="cart-product-inner">
+                                        <h3>漢堡兄弟
+                                            <p>Hamburg Brothers</p>
+                                        </h3>
+                                        <p class="price">792</p>
+                                        <button>加入購物車</button>
+                                    </div>
+                                </li>
+                                <li class="product-position">
+                                    <img src="img/product/product_4.png" alt="完美願望">
+                                    <a href="#" class="like-mark"></a>
+                                    <div class="cart-product-inner">
+                                        <h3>完美願望
+                                            <p>Dragon Ball Package</p>
+                                        </h3>
+                                        <p class="price">999,999</p>
+                                        <button>加入購物車</button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+                    <!-- add -->
+
+
+
+
+                </div>
+                <div class="footer">
+                    <div class="footer-left">
+                        <div class="footer-title">
+                            <p>關於 六角西餐廳</p>
+                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, cum atque fugit nesciunt aperiam natus delectus culpa impedit quidem consectetur</span>
+                        </div>
+                        <div class="footer-title">
+                            <p>聯絡方式</p>
+                            <ul class="footer-information">
+                                <li><a href="#">高雄中正五路到底</a></li>
+                                <li><a href="tel:886886886">+886 886 886</a></li>
+                                <li><a href="mailto:service@hexschool.com">service@hexschool.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-right">
+                        <a href="#"><img src="img/logo/logo_l@svg.svg" alt="logo"></a>
+                        <div class="footer-icon">
+                            <a href="#" class="icon-google">google</a>
+                            <a href="#" class="icon-twitter">twitter</a>
+                            <a href="#" class="icon-facebook">facebook</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

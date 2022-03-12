@@ -1,0 +1,294 @@
+// PC-feature 特色
+.feature-wrap{
+    background: #efe9e7;
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #3D1101;
+    .feature-slogan,.feature-slogan2{
+        font-size: 24px;
+        line-height: 40px;
+        position: relative;
+        @include iphone5(){
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+    .feature-slogan2{
+        &::after{
+            content: "";
+            border-top: 1px gray solid;
+            position: absolute;
+            left: 0;
+            right: 50%;
+            transform: translateX(-110%);
+            @include iphone5(){
+                display: none;
+            }
+        }
+        &::before{
+            content: "";
+            border-top: 1px gray solid;
+            position: absolute;
+            left: 50%;
+            right: 0;
+            transform: translateX(110%);
+            @include iphone5(){
+                    display: none;
+            }
+        }
+    }
+}
+.feature{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+    li{
+        width: 25%;
+        text-align: center;
+        padding: 10px;
+        @include iphone5(){
+            width: 100%;
+        }
+        .feature-title{
+            margin: 20px 0;
+            font-size: 20px;
+            @include iphone5(){
+                font-size: 18px;
+            }
+        }
+        .feature-inner{
+            text-align: left;
+            font-size: 18px;
+            line-height: 24px;
+            @include iphone5(){
+                font-size: 16px;
+                padding-left: 20px;
+            }
+        }
+        img{
+            border-radius: 50%;
+        }
+    }
+}
+//chef introduce 主廚介紹
+.chef-introduct{
+    background: #3D1101;
+    display: flex;
+    justify-content: center;
+    padding-left: 20px;
+    @include iphone5(){
+        flex-direction: column;
+        padding-left: 0;
+    }
+    .chef-s-png{
+        max-width: 40%;
+        display: block;
+        @include ipad(){
+            display: none;
+        }
+
+    }
+    .chef-l-png{
+        max-width: 40%;
+        display: none;
+        @include ipad(){
+            display: block;
+        }
+        @include iphone5(){
+            max-width: 100%;
+        }
+    }
+    .chef-introduct-inner{
+        max-width: 60%;
+        padding: 20px;
+        color: white;
+        align-self: center;
+        @include iphone5(){
+            max-width: 80%;
+        }
+        h2{
+            font-size: 20px;
+        }
+        p{
+            font-size: 16px;
+            line-height: 24px;
+        }
+        .chef-introduct-name{
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+//impression 感想
+.impression-title{
+    background: #efe9e7;
+    font-size: 30px;
+    text-align: center;
+    padding: 50px 0;
+    color: #3D1101;
+    @include iphone5(){
+        font-size: 24px;
+    }
+}
+.impression{
+    background: #efe9e7;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    padding: 30px 10px;
+    @include iphone5(){
+        padding: 0 5px;
+    }
+    li{
+        width: 33.3%;
+        display: flex;
+        flex-direction: column;
+        color:#3D1101 ;
+        @include ipad(){
+            width: 30%;
+        }
+        @include iphone5(){
+            padding: 30px 0;
+            width: 100%;
+        }
+        .impression-name{
+            display: flex;
+            align-items: center;
+            align-self: flex-start;
+            font-size: 18px;
+            img{
+                border-radius: 50%;
+            }
+            span{
+                margin-left: 10px;
+                @include ipad(){
+                    margin-left: 10px;
+                }
+            }
+        }
+        .impression-inner{
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            font-size: 16px;
+            @include ipad(){
+                align-self: flex-end;
+            }
+            @include iphone5(){
+                align-self: center;
+                font-size: 16px;
+                margin-left: 30px;
+            }
+            p{
+                line-height: 20px;
+            }
+        }
+        .improssion-nickname{
+            align-self: flex-end;
+            margin-top: 20px;
+            opacity: 0.5;
+        }
+    }
+}
+
+
+// booking-data
+.booking-title{
+    text-align: center;
+    padding-top: 50px;
+    font-size: 30px;
+    line-height: 40px;
+    color: #3D1101;
+    background: #f5f1f1;
+    @include iphone5(){
+        font-size: 24px;
+        line-height: 30px;
+        padding-top:20px 0 ;
+    }
+}
+.booking-data-wrap{
+    display: flex;
+    justify-content: center;
+    background: #f5f1f1;
+    padding: 50px 0;
+    @include iphone5(){
+        flex-direction: column;
+        padding: 50px 10px;
+    }
+    img{
+        max-width: 50%;
+        height: auto;
+        @include iphone5(){
+            max-width: 100%;
+        }
+    }
+}
+.booking-data{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 20px;
+    @include iphone5(){
+        width: 100%;
+        padding:0;
+    }
+    label{
+        color: #3D1101;
+        margin-top: 10px;
+    }
+    input{
+        padding: 8px 10px;
+        font-size: 16px;
+        border:1px rgb(216, 208, 208) solid;
+        outline: none;
+        border-radius: 5px;
+    }
+    .booking-radio{
+        label{
+            margin-right: 35px;
+        }
+        p{
+            color: #3D1101;
+            margin-top: 10px;
+        }
+        input{
+            margin-top:10px ;
+            cursor:pointer;
+        }
+    }
+    .booking-submit{
+        display: flex;
+        align-self: flex-end;
+        @include iphone5(){
+            margin-top: 40px;
+        }
+        input{
+            width: 80px;
+            color: white;
+            border: none;
+            margin-left: 10px;
+            cursor: pointer;
+            &:hover{
+                color: black;
+            }
+            &:active{
+                box-shadow: 1px 1px 10px gray;
+            }
+        }
+        .cancel{
+            background: gray;
+        }
+        .submit{
+            background: rgb(255, 74, 3);
+        }
+    }
+}

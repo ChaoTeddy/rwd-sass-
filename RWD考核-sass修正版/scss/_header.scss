@@ -1,0 +1,329 @@
+.wrap{
+    max-width: 1960px;
+    font-family: "微軟正黑體";
+}
+.container{
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.container-right{
+    @include iphone5(){
+        transition: all 1s;
+        transform: translateX(0);
+        &.active{
+            transition: all 1s;
+            transform: translateX(150px);
+        }
+    }
+}
+
+.header{
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    opacity: 0.8;
+    h1{
+        margin-left: 5%;
+        @include ipad(){
+            margin-left: 2%;
+        }
+        .header-logo{
+            display: block;
+            background-image: url(../img/logo/logo_w@svg.svg);
+            background-repeat: no-repeat;
+            text-indent: 101%;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 120px;
+            height: 25px;
+            @include ipad(){
+                background-size: 100%;
+                width:110px;
+            }
+            @include iphone5(){
+                background-size: 100%;
+                background-position: 1px;
+                max-width:80px;
+                height:auto;
+            }
+        }
+    }
+    .menu-button{
+        display: none;
+        @include iphone5(){
+            display: block;
+            width: 24px;
+            height: 24px;
+            border: none;
+            background: none;
+            position: relative;
+        }
+        .menu-button-style{
+            display: none;
+            @include iphone5(){
+                display: block;
+                border: 1px solid white;
+                position: absolute; 
+                left: 0;
+                right: 0;
+                margin-right: 5px;
+                &::after{
+                    content: "";
+                    border: 1px solid white;
+                    position: absolute;
+                    top: 5px;
+                    left: 0;
+                    right: 0;
+                }
+                &::before{
+                    content: "";
+                    border: 1px solid white;
+                    position: absolute;
+                    bottom: 5px;
+                    left: 0;
+                    right: 0;
+                }
+                &:first-child:active{
+                    border: rgb(241, 89, 18) 1px solid;
+                }
+            }
+        }   
+    }
+    
+    ul{
+        display: flex;
+        @include iphone5(){
+            display: none;
+        }
+        .pc-menu-wrap{
+            position: relative;
+        }
+        .pc-menu-wrap-a{
+            color: rgb(214, 213, 213);
+            padding: 20px 20px;
+            display: block;
+            text-decoration: none;
+            position: relative;
+            @include ipad(){
+                padding: 10px;
+            }
+            &::after{
+                content:"";
+                border: 2px rgb(241, 89, 18) solid;
+                transition: all 1s;
+                transform: scale(0);
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+            &:hover::after{
+                transition: all 1s;
+                transform: scale(1);
+            }
+            &:hover{
+                color: rgb(241, 89, 18);
+            }
+        }
+        .pc-menu-inner{
+            flex-direction: column;
+            position: absolute;
+            top:1 ;
+            left: 0;
+            right: 0;
+            display: none;
+            li{
+                a{  
+                    border-bottom: 1px gray solid;
+                    padding: 10px 0;
+                    display: block;
+                    text-decoration: none;
+                    text-align: center;
+                    background:  rgb(214, 213, 213);
+                    color: black;
+                    font-size: 14px;
+                    &:hover{
+                        font-size: 16px;
+                        color:  rgba(65, 39, 24, 0.644);
+                        font-weight: bold;
+                    }
+                    &:active{
+                        color: black;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.mobile-menu{
+    display: none;
+    @include iphone5(){
+        display: block;
+        position: fixed;
+        top:0;
+        bottom: 0;
+        z-index: 2;
+        width: 150px;
+        background: #000;
+        transition: all 1s;
+        transform: translateX(-150px);
+        overflow-y: scroll;
+        .mobile-menu-wrap{
+            ul{
+                display: none;
+                text-align: center;
+                li{
+                    a{
+                        text-decoration: none;
+                        color: rgba(65, 39, 24, 0.644);
+                        display: block;
+                        padding: 10px 0;
+                        background:  rgb(214, 213, 213);
+                        font-size: 12px;
+                        border-bottom: 1px solid gray;
+                        &:active{
+                            font-weight: bold;
+                            font-size: 16px;
+                            color: black;
+                        }
+                    }
+                }
+            }
+            .mobile-menu-wrap-a{
+                display: block;
+                border: 1px solid #000;
+                text-align: center;
+                color: white;
+                text-decoration: none;
+                border-bottom: 1px solid gray;
+                padding: 20px 0;
+                &:active{
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+            }
+        }
+        &.active{
+            transition: all 1s;
+            transform: translateX(0px);
+        }
+    }
+}
+
+
+
+// swiper
+.swiper {
+    width: 100%;
+    z-index: 0;
+}
+
+
+
+.swiper-slide{
+    position: relative;
+    .slide-b{
+        display: block;
+        @include ipad(){
+            display: none;
+        }
+        @include iphone5(){
+            display: none;
+        }
+    }
+    .slide-m{
+        display: none;
+        @include ipad(){
+            display: block;
+        }
+        @include iphone5(){
+            display: none;
+        }
+    }
+    .slide-s{
+        display: none;
+        @include ipad(){
+            display: none;
+        }
+        @include iphone5(){
+            display: block;
+        }
+    }
+    .banner-slogan{
+        text-align: center;
+        padding: 3%;
+        font-size: 29px;
+        height: auto;
+        color: white;
+        position: absolute;
+        top: 30%;
+        left: 20%;
+        right: 20%;
+        background: rgba(0,0,0,0.5);
+        @include ipad(){
+            font-size: 29px;
+            top: 30%;
+            left: 10%;
+            right: 10%;
+        }
+        @include iphone5(){
+            font-size: 28px;
+            top: 30%;
+            left: 2%;
+            right: 2%;
+        }
+        .banner-slogan-wrap{
+            display: flex;
+            flex-direction: column;
+            br{
+                display: none;
+                @include iphone5(){
+                    display: block;
+                }
+            }
+        }
+        .banner-inner{
+            display: block;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 3px;
+            margin-top: 20px;
+            @include iphone5(){
+                font-size: 12px;
+                margin-top: 20px;
+            }
+            span{
+                display: block;
+                position: relative;
+                &::before{
+                    font-family: 'FontAwesome';
+                    color: white;
+                    content: '\f2e7';
+                    font-size: 18px;
+                }
+                &::after{
+                    font-family: 'FontAwesome';
+                    color: white;
+                    content: '\f2e7';
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
